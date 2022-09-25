@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4cac4a5337.js" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="" id="bodi">
+  <div class="aquiMEsmo bigImgEsconde"></div>
+  <div class="conteudo-escondido">
+    <div class="img-esco">
+      <img src="./images/image-product-1.jpg" id="hideBigImg" alt="">
+      <div class="btnesque" onclick="changeBigImg('menos')" >
+        <img src="./images/icon-previous.svg" alt="">
+      </div>
+      <div class="btnesque1" onclick="changeBigImg('mais')" >
+        <img src="./images/icon-next.svg" alt="">
+      </div>
+      <div class="close-menu" id="xclose">
+        <img src="./images/icon-close.svg" alt="">
+      </div>
+    </div>
+    <div class="novasimgs">
+      <div class="small-img imgsla01 im01 newimg01" onclick="hoverImg(1)" id="thumb11"></div>
+      <div class="small-img imgsla02 im02" onclick="hoverImg(2)" id="thumb12"></div>
+      <div class="small-img imgsla03 im03" onclick="hoverImg(3)" id="thumb13"></div>
+      <div class="small-img imgsla04 im04" onclick="hoverImg(4)" id="thumb14"></div>
+    </div>
+  </div>
+    <header>
+        <div class="sub-header" id="subheader">
+          <div class="main-menu" onclick="showMenuScren()">
+            <div class="i1" id="mbar01"></div>
+            <div class="i2" id="mbar02"></div>
+            <div class="i3" id="mbar03"></div>
+          </div>
+          <a href="#" class="logo-img"><img src="./images/logo.svg" alt="logo"></a>
+          <nav class="aaa" id="menu-hiden">
+            <ul>
+              <i class="fa-solid fa-x close-icon" onclick="closeMenuScren()"></i>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Woman</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="sconde" id="black-hide"></div>
+        </div>
+        <div class="logo-car">
+          <i class="fa-solid fa-cart-shopping carshop1" onclick="menuToggle()"></i>
+          <div class="quantidade-carinho" id="qtue">
+            <span id="bola-amarela" onchange="verificarBola()">0</span>
+          </div>
+          <a class="ava" href="#"><img class="avatar" src="./images/image-avatar.png" alt="avatar"></a>
+          <div class="contem-carrinho" id="svgCarrinho">
+            <div class="vazio">
+              <span class="your-card">Your Cart is empty</span>
+            </div>
+            <span class="carrinho-cart">Cart</span>
+            <div class="all-carinho">
+              <div class="carrinho-img">
+              </div>
+              <div class="carrinho-nomes">
+                <div class="cima-nomes">
+                  <span>Fall Limited Edition Sneakers</span>
+                </div>
+                <div class="baixo-nomes">
+                  <span>$125</span>
+                  <span>x</span>
+                  <span id="unidadesCarrinho">0</span>
+                  <span id="valorTotal">$125</span>
+                </div>
+              </div>
+              <div class="apgar" onclick="apagarCarrinho()">
+                <img src="./images/icon-delete.svg" alt="">
+              </div>
+            </div>
+            <div class="finalizar">
+              <a href="#">Checkout</a>
+            </div>
+          </div>
+        </div>
+    </header>
+    <main>
+      <div class="imgs-container">
+        <img class="produtos" id="bigImg" src="./images/image-product-1.jpg" alt="">
+        <div class="io" onclick="changeBigImg('menos')"><img class="icons ico1" src="./images/icon-previous.svg" alt="icon"></div>
+        <div class="io" onclick="changeBigImg('mais')"><img class="icons ico2" src="./images/icon-next.svg" alt="next"></div>
+        <div class="imgs-pequenas">
+          <div class="small-img imgsla01 newimg01" onclick="hoverImg(1)" id="thumb01"></div>
+          <div class="small-img imgsla02" onclick="hoverImg(2)" id="thumb02"></div>
+          <div class="small-img imgsla03" onclick="hoverImg(3)" id="thumb03"></div>
+          <div class="small-img imgsla04" onclick="hoverImg(4)" id="thumb04"></div>
+        </div>
+      </div>
+      <div class="all-things">
+        <div class="descrition">
+          <h2>sneaker company</h2>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the wather can offer</p>
+        </div>
+        <div class="prices-salls">
+          <div class="pricessss">
+            <div class="containt-sel">
+              <span class="price">$125.00</span>
+              <span class="discont">50%</span>
+            </div>
+          </div>
+          <div class="pre-discu">
+            <span class="discu"><s>$250</s></span>
+          </div>
+        </div>
+        <div class="all-shops">
+        <div class="units">
+          <div class="add-itens">
+            <img class="quant1" id="botaoMenos" onclick="diminuirDisplay()" src="./images/icon-minus.svg" alt="minus">
+            <span id="displayAgora">0</span>
+            <img class="quant2" id="botaoMais" onclick="adicionarDisplay()" src="./images/icon-plus.svg" alt="next">
+          </div>
+        </div>
+        <div class="shop-here">
+          <a class="shop-a" id="add-to-card" onclick="adicionarNoCarrinho()"> <i class="fa-solid fa-cart-shopping carshop"></i>Add to Card</a>
+        </div>
+      </div>
+      </div>
+    </main>
+    <script src="./js.js"></script>
+</body>
+</html>
